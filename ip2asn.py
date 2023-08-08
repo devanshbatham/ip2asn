@@ -30,6 +30,8 @@ logger = logging.getLogger()
 
 
 
+import ipaddress
+
 def is_private_ip(ip):
     """
     Check if the given IP is a private IP.
@@ -40,7 +42,15 @@ def is_private_ip(ip):
     Returns:
     - bool: True if the IP is private, False otherwise.
     """
-    return ipaddress.ip_address(ip).is_private
+    try:
+        return ipaddress.ip_address(ip).is_private
+    except ValueError:
+        # Handle the error (you can raise another exception, print an error message, etc.)
+        pass
+        return False
+
+
+    
 
 def build_trie_from_rib(rib_file_path):
     """
