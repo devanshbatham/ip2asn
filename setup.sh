@@ -9,7 +9,7 @@ sudo mv ip2asn /usr/local/bin/
 # Make the ip2asn file executable
 sudo chmod +x /usr/local/bin/ip2asn
 
-echo "ip2asn has been installed successfully! Usage 'cat ips.txt | ip2asn'"
+echo "\nip2asn has been installed successfully! Usage 'cat ips.txt | ip2asn'"
 
 mkdir $HOME/.ip2asn
 mv rib-trie/trie_data.json.gz $HOME/.ip2asn/trie_data.json.gz

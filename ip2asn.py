@@ -119,10 +119,10 @@ args = parser.parse_args()
 
 
 if os.path.exists(TRIE_SAVE_PATH):
-    logger.info("Loading trie from saved file...")
     trie = load_trie_from_file(TRIE_SAVE_PATH)
 else:
     logger.info("Serialized trie not found. Building trie from RIB dump...")
+    logger.info("This may take some time..")
     trie = build_trie_from_rib(args.rib_path)
 
 ips_to_search = [line.strip() for line in sys.stdin]
