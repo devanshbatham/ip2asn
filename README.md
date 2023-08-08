@@ -8,10 +8,10 @@
 <p align="center">
   <a href="#installation">🏗️ Installation</a>  
   &nbsp;&nbsp;&nbsp;
-  <a href="#updating-rib-data">🔄 Updating RIB Data</a> 
-  &nbsp;&nbsp;&nbsp; 
   <a href="#usage">⛏️ Usage</a>
   &nbsp;&nbsp;&nbsp;
+    <a href="#updating-rib-data">🔄 Updating RIB Data</a> 
+      &nbsp;&nbsp;&nbsp; 
   <a href="#how-it-works">📖 How It Works</a>
   <br>
 </p>
