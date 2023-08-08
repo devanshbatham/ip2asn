@@ -116,7 +116,10 @@ def find_asn_for_ips(ips, trie):
     """
     asn_map = {}
     for ip in ips:
-        asn_map[ip] = trie.get(ip)
+        try:
+            asn_map[ip] = trie.get(ip)
+        except ValueError:
+            pass
     return asn_map
 
 parser = argparse.ArgumentParser(description="Find ASN for given IPs.")
