@@ -34,7 +34,7 @@ sudo chmod +x setup.sh
 
 
 ```sh
-(~)>> cat ips.txt | ip2asn
+(~)>> cat input_ips.txt | ip2asn
 
 74.122.191.97 [AS15211]
 74.122.191.99 [AS15211]
@@ -50,7 +50,7 @@ sudo chmod +x setup.sh
 - With `--json` for JSON output: 
 
 ```sh
-(~)>> cat ips.txt | ip2asn --json
+(~)>> cat input_ips.txt | ip2asn --json
 
 {
   "AS1299": [
