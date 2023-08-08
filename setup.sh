@@ -9,7 +9,7 @@ sudo mv ip2asn /usr/local/bin/
 # Make the ip2asn file executable
 sudo chmod +x /usr/local/bin/ip2asn
 
-echo "\n"
+echo ""
 echo "ip2asn has been installed successfully! Usage 'cat ips.txt | ip2asn'"
 
 mkdir $HOME/.ip2asn
