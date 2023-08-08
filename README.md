@@ -22,7 +22,8 @@
 ```sh
 git clone https://github.com/devanshbatham/ip2asn
 cd ip2asn
-sudo ./setup.sh
+sudo chmod +x setup.sh
+./setup.sh
 ```
 
 
