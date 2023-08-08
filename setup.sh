@@ -10,3 +10,5 @@ sudo mv ip2asn /usr/local/bin/
 sudo chmod +x /usr/local/bin/ip2asn
 
 echo "ip2asn has been installed successfully! Usage 'cat ips.txt | ip2asn'"
+
+mv trie_data.json.gz ~/.ip2asn/trie_data.json.gz
