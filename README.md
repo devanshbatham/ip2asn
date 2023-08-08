@@ -1,5 +1,3 @@
-Based on the format provided for `revwhoix`, here is the README for `ip2asn`:
-
 <h1 align="center">
     ip2asn
   <br>
