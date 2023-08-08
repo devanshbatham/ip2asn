@@ -19,7 +19,7 @@ import shutil
 HOME_DIR = str(Path.home())
 TRIE_DIR = os.path.join(HOME_DIR, ".ip2asn")
 os.makedirs(TRIE_DIR, exist_ok=True)
-TRIE_SAVE_PATH = os.path.join(TRIE_DIR, "/data/trie_data.json.gz")
+TRIE_SAVE_PATH = os.path.join(TRIE_DIR, "trie_data.json.gz")
 
 # Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(message)s')
@@ -47,7 +47,7 @@ def setup_trie_data():
 
     # Copy trie_data.json.gz from the current directory to ~/.ip2asn
     current_dir = Path.cwd()
-    trie_data_path = current_dir / "trie_data.json.gz"
+    trie_data_path = current_dir / "/data/trie_data.json.gz"
     
     if trie_data_path.exists():
         shutil.copy(trie_data_path, target_dir)
