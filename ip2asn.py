@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 import pytricia
 import sys
@@ -12,6 +11,8 @@ from collections import defaultdict
 import logging
 import ipaddress
 from pathlib import Path
+import shutil
+
 
 # Constants
 HOME_DIR = str(Path.home())
@@ -22,6 +23,38 @@ TRIE_SAVE_PATH = os.path.join(TRIE_DIR, "/data/trie_data.json.gz")
 # Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logger = logging.getLogger()
+
+
+def setup_trie_data():
+    """
+    Set up trie data by copying the `trie_data.json.gz` file from the 
+    current directory to the `~/.ip2asn/` directory.
+    
+    The function performs the following steps:
+    1. Determines the home directory of the user.
+    2. Creates (if it doesn't exist) a directory named `.ip2asn` in the user's home directory.
+    3. Checks if the `trie_data.json.gz` exists in the current directory.
+    4. If the file exists, copies it to the `~/.ip2asn/` directory.
+    
+    """
+    # Get home directory
+    home_dir = Path.home()
+
+    # Create the directory ~/.ip2asn
+    target_dir = home_dir / ".ip2asn"
+    target_dir.mkdir(exist_ok=True)
+
+    # Copy trie_data.json.gz from the current directory to ~/.ip2asn
+    current_dir = Path.cwd()
+    trie_data_path = current_dir / "trie_data.json.gz"
+    
+    if trie_data_path.exists():
+        shutil.copy(trie_data_path, target_dir)
+    else:
+        pass
+
+
+
 
 def is_private_ip(ip):
     """
@@ -109,6 +142,9 @@ args = parser.parse_args()
 
 
 # Main execution starts here
+
+setup_trie_data()
+
 if os.path.exists(TRIE_SAVE_PATH):
     logger.info("Loading trie from saved file...")
     trie = load_trie_from_file(TRIE_SAVE_PATH)
