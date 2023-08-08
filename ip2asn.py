@@ -47,7 +47,7 @@ def setup_trie_data():
 
     # Copy trie_data.json.gz from the current directory to ~/.ip2asn
     current_dir = Path.cwd()
-    trie_data_path = current_dir / "/data/trie_data.json.gz"
+    trie_data_path = current_dir / "trie_data.json.gz"
     
     if trie_data_path.exists():
         shutil.copy(trie_data_path, target_dir)
