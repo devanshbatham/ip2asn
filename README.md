@@ -22,7 +22,7 @@
 ```sh
 git clone https://github.com/devanshbatham/ip2asn
 cd ip2asn
-./setup.sh
+sudo ./setup.sh
 ```
 
 
