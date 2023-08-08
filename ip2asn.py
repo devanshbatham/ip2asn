@@ -17,7 +17,7 @@ from pathlib import Path
 HOME_DIR = str(Path.home())
 TRIE_DIR = os.path.join(HOME_DIR, ".ip2asn")
 os.makedirs(TRIE_DIR, exist_ok=True)
-TRIE_SAVE_PATH = os.path.join(TRIE_DIR, "trie_data.json.gz")
+TRIE_SAVE_PATH = os.path.join(TRIE_DIR, "/data/trie_data.json.gz")
 
 # Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(message)s')
