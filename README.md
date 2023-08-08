@@ -69,11 +69,6 @@ sudo chmod +x setup.sh
 ```
 
 
-- To use a different RIB file to build the trie (read the section below):
-
-```sh
-echo "8.8.8.8" | ip2asn --rib-path /path/to/rib.txt
-```
 
 # Updating RIB Data
 
@@ -82,6 +77,11 @@ If you wish to build the trie yourself or want to update the trie data:
 1. By default, `trie_data.json.gz` is saved in the `~/.ip2asn/` folder. So, firstly, delete the `~/.ip2asn` folder.
 2. Run the `get-rib.sh` script.
 3. Build the trie using the `--rib-path` or `--rp` option with the updated RIB data.
+
+```sh
+echo "8.8.8.8" | ip2asn --rib-path /path/to/processed_rib.txt
+```
+
 
 
 # How It Works
