@@ -30,7 +30,7 @@ logger = logging.getLogger()
 
 
 
-import ipaddress
+
 
 def is_private_ip(ip):
     """
